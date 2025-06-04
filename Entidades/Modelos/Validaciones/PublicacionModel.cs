@@ -1,0 +1,29 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace Entidades.Modelos.Validaciones
+{
+    public class PublicacionModel
+    {
+        [Required(ErrorMessage = "El docente es obligatorio")]
+        public int DocenteId { get; set; }
+
+        [Required(ErrorMessage = "El título es obligatorio")]
+        [StringLength(200, ErrorMessage = "El título no puede exceder los 200 caracteres")]
+        public string Titulo { get; set; }
+
+        [Required(ErrorMessage = "La revista es obligatoria")]
+        [StringLength(100, ErrorMessage = "La revista no puede exceder los 100 caracteres")]
+        public string Revista { get; set; }
+
+        [Required(ErrorMessage = "La fecha de publicación es obligatoria")]
+        [DataType(DataType.Date)]
+        public DateTime FechaPublicacion { get; set; }
+
+        [StringLength(50, ErrorMessage = "El DOI no puede exceder los 50 caracteres")]
+        public string DOI { get; set; }
+
+        [StringLength(200, ErrorMessage = "La URL no puede exceder los 200 caracteres")]
+        [Url(ErrorMessage = "La URL no es válida")]
+        public string URL { get; set; }
+    }
+} 
