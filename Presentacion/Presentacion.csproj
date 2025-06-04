@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="Shared\README.md" />
+    <None Include="Components\README.md" />
+    <None Include="Components\Pages\README.md" />
+    <None Include="Components\Layouts\README.md" />
+    <None Include="Data\README.md" />
+    <None Include="Properties\README.md" />
+  </ItemGroup>
+
+</Project>
